@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
+import 'package:com/components/horizontal_listview.dart';
+
 void main() => runApp(
       MaterialApp(
         home: HomePage(),
@@ -149,7 +151,8 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Text('Categories'),
-          )
+          ),
+          horizontalList(),
         ],
       ),
     );
