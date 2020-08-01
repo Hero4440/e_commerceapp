@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(
               Icons.search,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
           IconButton(
