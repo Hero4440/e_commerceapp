@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
 import 'package:com/components/horizontal_listview.dart';
+import 'package:com/components/products.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -22,21 +23,22 @@ class _HomePageState extends State<HomePage> {
       child: Carousel(
         boxFit: BoxFit.cover,
         images: [
-          AssetImage('images/PUBG1.jpeg'),
-          AssetImage('images/PUBG2.jpeg'),
-          AssetImage('images/PUBG3.jpeg'),
-          AssetImage('images/PUBG4.jpeg'),
+          AssetImage('images/products/PUBG1.jpeg'),
+          AssetImage('images/products/PUBG2.jpeg'),
+          AssetImage('images/products/PUBG3.jpeg'),
+          AssetImage('images/products/PUBG4.jpeg'),
         ],
         autoplay: false,
         dotSize: 4.0,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
         indicatorBgPadding: 6.0,
+        dotBgColor: Colors.transparent,
       ),
     );
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
+        elevation: 0.1,
         title: Text('Shop'),
         actions: <Widget>[
           IconButton(
@@ -44,12 +46,14 @@ class _HomePageState extends State<HomePage> {
               Icons.search,
               color: Colors.white,
             ),
+            onPressed: () {},
           ),
           IconButton(
             icon: Icon(
               Icons.shopping_cart,
               color: Colors.white,
             ),
+            onPressed: () {},
           )
         ],
       ),
@@ -152,7 +156,17 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.all(8.0),
             child: Text('Categories'),
           ),
-          horizontalList(),
+          horizontalList(), //horizontalList
+          Padding(
+            padding: EdgeInsets.all(15.0),
+            child: Text('Recents Products'),
+          ),
+          //grid
+          Container(
+            height: 320.0,
+            //Products grid
+            child: Products(),
+          ),
         ],
       ),
     );
