@@ -225,7 +225,55 @@ class _ProductDetailsState extends State<ProductDetails> {
             title: Text("product details"),
             subtitle: Text(
                 "And that's why I always say 'Shumshumschilpiddydah!' Why are you doing this bit? We're gonna die. Flip the pickle over. And that's the wayyy, the news goes!"),
-          )
+          ),
+          Divider(),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(12, 5, 5, 5),
+                child: Text(
+                  "Product name",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5),
+                child: Text(widget.product_detail_name),
+              )
+            ],
+          ),
+//          create product Brand
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(12, 5, 5, 5),
+                child: Text(
+                  "Product brand",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5),
+                child: Text("Brand"),
+              )
+            ],
+          ),
+//          Add the products conditon
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(12, 5, 5, 5),
+                child: Text(
+                  "Product condition",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(5),
+                child: Text("new/used"),
+              )
+            ],
+          ),
         ],
       ),
     );
