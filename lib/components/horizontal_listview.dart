@@ -4,37 +4,35 @@ class horizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+
+      height: 100.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
             image_location: 'images/cat/shorts.png',
-            image_caption: 'short',
-          ),
-          Category(
-            image_location: 'images/cat/dress.png',
-            image_caption: 'dress',
+
+            image_caption: "shorts",
           ),
           Category(
             image_location: 'images/cat/shorts.png',
-            image_caption: 'short',
-          ),
-          Category(
-            image_location: 'images/cat/dress.png',
-            image_caption: 'dress',
+            image_caption: "shorts",
           ),
           Category(
             image_location: 'images/cat/shorts.png',
-            image_caption: 'short',
-          ),
-          Category(
-            image_location: 'images/cat/dress.png',
-            image_caption: 'dress',
+            image_caption: "shorts",
           ),
           Category(
             image_location: 'images/cat/shorts.png',
-            image_caption: 'short',
+            image_caption: "shorts",
+          ),
+          Category(
+            image_location: 'images/cat/shorts.png',
+            image_caption: "shorts",
+          ),
+          Category(
+            image_location: 'images/cat/shorts.png',
+            image_caption: "shorts",
           ),
         ],
       ),
@@ -45,12 +43,12 @@ class horizontalList extends StatelessWidget {
 class Category extends StatelessWidget {
   final String image_location;
   final String image_caption;
-
   Category({this.image_location, this.image_caption});
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(2.0),
+
       child: InkWell(
         onTap: () {},
         child: Container(
@@ -63,7 +61,9 @@ class Category extends StatelessWidget {
             ),
             subtitle: Container(
               alignment: Alignment.topCenter,
-              child: Text(image_caption),
+              child: Text(
+                image_caption,
+              ),
             ),
           ),
         ),
