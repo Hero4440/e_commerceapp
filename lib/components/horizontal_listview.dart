@@ -4,12 +4,14 @@ class horizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       height: 100.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
             image_location: 'images/cat/shorts.png',
+
             image_caption: "shorts",
           ),
           Category(
@@ -45,7 +47,8 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(2.0),
+      padding: EdgeInsets.all(2.0),
+
       child: InkWell(
         onTap: () {},
         child: Container(
