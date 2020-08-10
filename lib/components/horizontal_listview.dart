@@ -50,7 +50,7 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(2.0),
+      padding: EdgeInsets.all(1.0),
       child: InkWell(
         onTap: () {},
         child: Container(
@@ -58,7 +58,7 @@ class Category extends StatelessWidget {
           child: ListTile(
             title: Image.asset(
               image_location,
-              width: 80.0,
+              width: 50.0,
               height: 80.0,
             ),
             subtitle: Container(
