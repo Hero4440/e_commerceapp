@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
-import 'package:com/components/products.dart';
 import 'package:com/components/horizontal_listview.dart';
+import 'package:com/components/products.dart';
 
 void main() => runApp(
       MaterialApp(
