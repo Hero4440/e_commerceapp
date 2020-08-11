@@ -16,13 +16,13 @@ class _ProductsState extends State<Products> {
     },
     {
       "name": "Blasdaazer",
-      "picture": "images/products/PUBG1.jpeg",
+      "picture": "images/products/PUBG3.jpeg",
       "old_price": 120,
       "price": 85,
     },
     {
       "name": "Blaadsdzer",
-      "picture": "images/products/PUBG1.jpeg",
+      "picture": "images/products/PUBG4.jpeg",
       "old_price": 120,
       "price": 85,
     },
@@ -31,7 +31,19 @@ class _ProductsState extends State<Products> {
       "picture": "images/products/PUBG1.jpeg",
       "old_price": 120,
       "price": 85,
-    }
+    },
+    {
+      "name": "Blazasdaer",
+      "picture": "images/products/PUBG2.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
+    {
+      "name": "Blazasdaer",
+      "picture": "images/products/PUBG3.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
   ];
   @override
   Widget build(BuildContext context) {

@@ -82,7 +82,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 //          XXXXXXXXX the first buttons XXXXXXXXXXX
           Row(
             children: <Widget>[
-//              XXXXXXXXXXX the size buttin XXXXXXXX
+//              XXXXXXXXXXX the size butto n XXXXXXXX
               Expanded(
                 child: MaterialButton(
                   onPressed: () {
@@ -221,6 +221,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ],
           ),
+          Divider(),
           ListTile(
             title: Text("product details"),
             subtitle: Text(
@@ -258,7 +259,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               )
             ],
           ),
-//          Add the products conditon
+//Add the products conditon
           Row(
             children: <Widget>[
               Padding(
