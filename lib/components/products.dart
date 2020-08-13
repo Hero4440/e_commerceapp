@@ -72,6 +72,8 @@ class Single_prod extends StatelessWidget {
       this.prod_pricture,
       this.prod_old_price,
       this.prod_price});
+
+  get style => null;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -93,23 +95,23 @@ class Single_prod extends StatelessWidget {
               child: GridTile(
                 footer: Container(
                   color: Colors.white70,
-                  child: ListTile(
-                    leading: Text(
-                      prod_name,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    title: Text(
-                      "\ Rs. $prod_price",
-                      style: TextStyle(
-                          color: Colors.red, fontWeight: FontWeight.w800),
-                    ),
-                    subtitle: Text(
-                      " Rs. $prod_old_price",
-                      style: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w800,
-                          decoration: TextDecoration.lineThrough),
-                    ),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          prod_name,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14.0),
+                        ),
+                      ),
+                      Text(
+                        "\ Rs. $prod_price",
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0),
+                      ),
+                    ],
                   ),
                 ),
                 child: Image.asset(

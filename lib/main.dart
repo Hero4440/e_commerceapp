@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {},
               child: ListTile(
                 title: Text("My Account"),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.lightGreenAccent),
               ),
             ),
             InkWell(
@@ -106,9 +106,9 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: () {},
               child: ListTile(
-                title: Text("Categories"),
+                title: Text("Shopping Cart"),
                 leading: Icon(
-                  Icons.dashboard,
+                  Icons.shopping_cart,
                   color: Colors.purple,
                 ),
               ),
