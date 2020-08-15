@@ -16,13 +16,13 @@ class _ProductsState extends State<Products> {
     },
     {
       "name": "Blasdaazer",
-      "picture": "images/products/PUBG1.jpeg",
+      "picture": "images/products/PUBG3.jpeg",
       "old_price": 120,
       "price": 85,
     },
     {
       "name": "Blaadsdzer",
-      "picture": "images/products/PUBG1.jpeg",
+      "picture": "images/products/PUBG4.jpeg",
       "old_price": 120,
       "price": 85,
     },
@@ -31,7 +31,19 @@ class _ProductsState extends State<Products> {
       "picture": "images/products/PUBG1.jpeg",
       "old_price": 120,
       "price": 85,
-    }
+    },
+    {
+      "name": "Blazasdaer",
+      "picture": "images/products/PUBG2.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
+    {
+      "name": "Blazasdaer",
+      "picture": "images/products/PUBG3.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -60,6 +72,8 @@ class Single_prod extends StatelessWidget {
       this.prod_pricture,
       this.prod_old_price,
       this.prod_price});
+
+  get style => null;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -71,33 +85,35 @@ class Single_prod extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProductDetails(
-                      product_detail_name: prod_name,
-                      product_detail_new_price: prod_price,
-                      product_detail_old_price: prod_old_price,
-                      product_detail_picture: prod_pricture,
+                    builder: (context) => Container(
+                      child: ProductDetails(
+                        product_detail_name: prod_name,
+                        product_detail_new_price: prod_price,
+                        product_detail_old_price: prod_old_price,
+                        product_detail_picture: prod_pricture,
+                      ),
                     ),
                   )),
               child: GridTile(
                 footer: Container(
                   color: Colors.white70,
-                  child: ListTile(
-                    leading: Text(
-                      prod_name,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    title: Text(
-                      "\ Rs. $prod_price",
-                      style: TextStyle(
-                          color: Colors.red, fontWeight: FontWeight.w800),
-                    ),
-                    subtitle: Text(
-                      " Rs. $prod_old_price",
-                      style: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w800,
-                          decoration: TextDecoration.lineThrough),
-                    ),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          prod_name,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14.0),
+                        ),
+                      ),
+                      Text(
+                        "\ Rs. $prod_price",
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0),
+                      ),
+                    ],
                   ),
                 ),
                 child: Image.asset(

@@ -3,6 +3,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 
 import 'package:com/components/products.dart';
 import 'package:com/components/horizontal_listview.dart';
+import 'package:com/pages/cart.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carouse1 = new Container(
-      height: 200.0,
+      height: 250.0,
       child: Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -53,7 +54,12 @@ class _HomePageState extends State<HomePage> {
               Icons.shopping_cart,
               color: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => cart()),
+              );
+            },
           )
         ],
       ),
@@ -90,7 +96,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {},
               child: ListTile(
                 title: Text("My Account"),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.lightGreenAccent),
               ),
             ),
             InkWell(
@@ -104,11 +110,16 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => cart()),
+                );
+              },
               child: ListTile(
-                title: Text("Categories"),
+                title: Text("Shopping Cart"),
                 leading: Icon(
-                  Icons.dashboard,
+                  Icons.shopping_cart,
                   color: Colors.purple,
                 ),
               ),

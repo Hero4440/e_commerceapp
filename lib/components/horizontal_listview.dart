@@ -4,35 +4,33 @@ class horizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      height: 100.0,
+      height: 70.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
-            image_location: 'images/cat/shorts.png',
-
-            image_caption: "shorts",
+            image_location: 'images/cat/Accessory.png',
+            image_caption: "Accessory",
           ),
           Category(
-            image_location: 'images/cat/shorts.png',
-            image_caption: "shorts",
+            image_location: 'images/cat/dresses.png',
+            image_caption: "Dresses",
           ),
           Category(
-            image_location: 'images/cat/shorts.png',
-            image_caption: "shorts",
+            image_location: 'images/cat/short.png',
+            image_caption: "Shorts",
           ),
           Category(
-            image_location: 'images/cat/shorts.png',
-            image_caption: "shorts",
+            image_location: 'images/cat/shirt.png',
+            image_caption: "Shirt",
           ),
           Category(
-            image_location: 'images/cat/shorts.png',
-            image_caption: "shorts",
+            image_location: 'images/cat/footwear.png',
+            image_caption: "Footwears",
           ),
           Category(
-            image_location: 'images/cat/shorts.png',
-            image_caption: "shorts",
+            image_location: 'images/cat/Wellness.png',
+            image_caption: "Wellness",
           ),
         ],
       ),
@@ -47,8 +45,7 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(2.0),
-
+      padding: const EdgeInsets.all(2.0),
       child: InkWell(
         onTap: () {},
         child: Container(
@@ -56,8 +53,8 @@ class Category extends StatelessWidget {
           child: ListTile(
             title: Image.asset(
               image_location,
-              width: 80.0,
-              height: 80.0,
+              width: 50.0,
+              height: 50.0,
             ),
             subtitle: Container(
               alignment: Alignment.topCenter,
