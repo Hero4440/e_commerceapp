@@ -85,11 +85,13 @@ class Single_prod extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProductDetails(
-                      product_detail_name: prod_name,
-                      product_detail_new_price: prod_price,
-                      product_detail_old_price: prod_old_price,
-                      product_detail_picture: prod_pricture,
+                    builder: (context) => Container(
+                      child: ProductDetails(
+                        product_detail_name: prod_name,
+                        product_detail_new_price: prod_price,
+                        product_detail_old_price: prod_old_price,
+                        product_detail_picture: prod_pricture,
+                      ),
                     ),
                   )),
               child: GridTile(
