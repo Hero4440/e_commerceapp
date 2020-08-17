@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carouse1 = new Container(
-      height: 250.0,
+      height: 150.0,
       child: Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -160,24 +160,29 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: new ListView(
+      body: new Column(
         children: <Widget>[
           image_carouse1,
           Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Categories'),
+            padding: EdgeInsets.all(4.0),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('Categories'),
+            ),
           ),
+
           horizontalList(), //horizontalList
           Padding(
-            padding: EdgeInsets.all(15.0),
-            child: Text('Recents Products'),
+            padding: EdgeInsets.all(8.0),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('Recents Products'),
+            ),
           ),
           //grid
-          Container(
-            height: 320.0,
-            //Products grid
-            child: Products(),
-          ),
+
+          //Products grid
+          Flexible(child: Products()),
         ],
       ),
     );
